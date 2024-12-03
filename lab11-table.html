@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Labs - Forms and Tables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    form {
+      margin-bottom: 2rem;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+    table {
+      border: 1px solid #ddd;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    table#collapsed {
+      border-collapse: collapse;
+    }
+    table#styled th, table#styled td {
+      background-color: #96D4D4;
+    }
+    table#styled, table#styled th, table#styled td {
+      border: 1px solid white;
+      border-collapse: collapse;
+    }
+    table#dotted-border {
+      border-collapse: collapse;
+    }
+    table#dotted-border th, table#dotted-border td {
+      border-style: dotted;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    caption {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    tfoot td {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>HTML Table - with Borders</h2>
+    <table id="employeeTable">
+      <caption>Employee Details</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Skills</th>
+          <th>Department</th>
+          <th>Role</th>
+          <th>Salary</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>john.doe@example.com</td>
+          <td>Male</td>
+          <td>JavaScript, Python</td>
+          <td>Engineering</td>
+          <td>Software Engineer</td>
+          <td>$80,000</td>
+          <td>Team Lead</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>jane.smith@example.com</td>
+          <td>Female</td>
+          <td>Java, SQL</td>
+          <td>HR</td>
+          <td>HR Manager</td>
+          <td>$60,000</td>
+          <td>Recruiting Expert</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mike Johnson</td>
+          <td>mike.johnson@example.com</td>
+          <td>Male</td>
+          <td>Python, Machine Learning</td>
+          <td>Sales</td>
+          <td>Data Analyst</td>
+          <td>$75,000</td>
+          <td>Excellent Presenter</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Emily Davis</td>
+          <td>emily.davis@example.com</td>
+          <td>Female</td>
+          <td>JavaScript, React</td>
+          <td>Engineering</td>
+          <td>Frontend Developer</td>
+          <td>$70,000</td>
+          <td>Creative Designer</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="8" style="text-align: right;">Total Employees</td>
+          <td id="totalEmployees">4</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section>
+    <h2>HTML Table - with Collapsed Borders</h2>
+    <table id="collapsed">
+      <caption>Employee Details</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Skills</th>
+          <th>Department</th>
+          <th>Role</th>
+          <th>Salary</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>john.doe@example.com</td>
+          <td>Male</td>
+          <td>JavaScript, Python</td>
+          <td>Engineering</td>
+          <td>Software Engineer</td>
+          <td>$80,000</td>
+          <td>Team Lead</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>jane.smith@example.com</td>
+          <td>Female</td>
+          <td>Java, SQL</td>
+          <td>HR</td>
+          <td>HR Manager</td>
+          <td>$60,000</td>
+          <td>Recruiting Expert</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mike Johnson</td>
+          <td>mike.johnson@example.com</td>
+          <td>Male</td>
+          <td>Python, Machine Learning</td>
+          <td>Sales</td>
+          <td>Data Analyst</td>
+          <td>$75,000</td>
+          <td>Excellent Presenter</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Emily Davis</td>
+          <td>emily.davis@example.com</td>
+          <td>Female</td>
+          <td>JavaScript, React</td>
+          <td>Engineering</td>
+          <td>Frontend Developer</td>
+          <td>$70,000</td>
+          <td>Creative Designer</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="8" style="text-align: right;">Total Employees</td>
+          <td id="totalEmployees">4</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section>
+    <h2>HTML Table - with Styled Borders</h2>
+    <table id="styled">
+      <caption>Employee Details</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Skills</th>
+          <th>Department</th>
+          <th>Role</th>
+          <th>Salary</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>john.doe@example.com</td>
+          <td>Male</td>
+          <td>JavaScript, Python</td>
+          <td>Engineering</td>
+          <td>Software Engineer</td>
+          <td>$80,000</td>
+          <td>Team Lead</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>jane.smith@example.com</td>
+          <td>Female</td>
+          <td>Java, SQL</td>
+          <td>HR</td>
+          <td>HR Manager</td>
+          <td>$60,000</td>
+          <td>Recruiting Expert</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mike Johnson</td>
+          <td>mike.johnson@example.com</td>
+          <td>Male</td>
+          <td>Python, Machine Learning</td>
+          <td>Sales</td>
+          <td>Data Analyst</td>
+          <td>$75,000</td>
+          <td>Excellent Presenter</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Emily Davis</td>
+          <td>emily.davis@example.com</td>
+          <td>Female</td>
+          <td>JavaScript, React</td>
+          <td>Engineering</td>
+          <td>Frontend Developer</td>
+          <td>$70,000</td>
+          <td>Creative Designer</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="8" style="text-align: right;">Total Employees</td>
+          <td id="totalEmployees">4</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section>
+    <h2>HTML Table - with Dotted Borders</h2>
+    <table id="dotted-border">
+      <caption>Employee Details</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Skills</th>
+          <th>Department</th>
+          <th>Role</th>
+          <th>Salary</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>john.doe@example.com</td>
+          <td>Male</td>
+          <td>JavaScript, Python</td>
+          <td>Engineering</td>
+          <td>Software Engineer</td>
+          <td>$80,000</td>
+          <td>Team Lead</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>jane.smith@example.com</td>
+          <td>Female</td>
+          <td>Java, SQL</td>
+          <td>HR</td>
+          <td>HR Manager</td>
+          <td>$60,000</td>
+          <td>Recruiting Expert</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mike Johnson</td>
+          <td>mike.johnson@example.com</td>
+          <td>Male</td>
+          <td>Python, Machine Learning</td>
+          <td>Sales</td>
+          <td>Data Analyst</td>
+          <td>$75,000</td>
+          <td>Excellent Presenter</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Emily Davis</td>
+          <td>emily.davis@example.com</td>
+          <td>Female</td>
+          <td>JavaScript, React</td>
+          <td>Engineering</td>
+          <td>Frontend Developer</td>
+          <td>$70,000</td>
+          <td>Creative Designer</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="8" style="text-align: right;">Total Employees</td>
+          <td id="totalEmployees">4</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section>
+    <h2>HTML Table - Colspan</h2>
+    <table>
+      <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>43</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>57</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h2>HTML Table - Rowspan</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>Jill</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Phone</th>
+        <td>555-1234</td>
+      </tr>
+      <tr>
+        <td>555-8745</td>
+    </tr>
+    </table>
+  </section>
+</body>
+</html>

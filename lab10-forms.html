@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Labs - Forms and Tables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    form {
+      margin-bottom: 2rem;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body></body>
+
+  <section>
+    <h2>HTML Form - Using GET Method</h2>
+    <p>Use the form below to search the website.</p>
+
+    <form id="lab1Form" method="GET" action="https://httpbin.org/get">
+      <label for="keyword">Search: </label>
+      <input type="text" id="keyword" name="keyword" placeholder="Enter keyword to search ..." required>
+      <br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+  </section>
+
+  <section>
+    <h2>HTML Form - Using POST Method</h2>
+    <p>Use the form below to add an employee's details. Submitted data will be displayed as a JSON string.</p>
+
+    <form id="lab2Form" method="POST" action="https://httpbin.org/post">
+      <label for="empName">Name: </label>
+      <input type="text" id="empName" name="name" required>
+      <br><br>
+
+      <label for="empEmail">Email: </label>
+      <input type="email" id="empEmail" name="email" required>
+      <br><br>
+
+      <label for="gender">Gender: </label>
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female" required> Female</label>
+      <br><br>
+
+      <label for="empSkills">Skills: </label>
+      <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+      <label><input type="checkbox" name="skills" value="Python"> Python</label>
+      <label><input type="checkbox" name="skills" value="Java"> Java</label>
+      <br><br>
+
+      <label for="empDept">Department: </label>
+      <select id="empDept" name="department" required>
+        <option value="Engineering">Engineering</option>
+        <option value="HR">HR</option>
+        <option value="Sales">Sales</option>
+      </select>
+      <br><br>
+
+      <label for="empRole">Role: </label>
+      <input type="text" id="empRole" name="role" required>
+      <br><br>
+
+      <label for="empSalary">Salary: </label>
+      <input type="number" id="empSalary" name="salary" required>
+      <br><br>
+
+      <label for="empNotes">Notes: </label>
+      <textarea id="empNotes" name="notes"></textarea>
+      <br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+  </section>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Lab</title>
+
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="description" content="HTML Lab Examples">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    iframe {
+      border: 1px solid black;
+      width: 50vw;
+      height: 50vh;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>iFrame</h2>
+  <iframe
+    id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+  </iframe>
+
+
+  <h2>iFrame - target for a link</h2>
+  <iframe src="" name="iframe_a" title="Iframe Example"></iframe>
+  <p><a href="https://example.com/" target="iframe_a">Click here to visit example.com</a></p>
+
+</body>
+
+</html>

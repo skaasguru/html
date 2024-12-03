@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Labs - Forms and Tables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    form {
+      margin-bottom: 2rem;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+    .output {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    caption {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    tfoot td {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Lab 2: Tables -->
+  <section>
+    <h2>Lab 2: HTML Table Example</h2>
+    <table id="employeeTable">
+      <caption>Employee Details</caption>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Skills</th>
+          <th>Department</th>
+          <th>Role</th>
+          <th>Salary</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>john.doe@example.com</td>
+          <td>Male</td>
+          <td>JavaScript, Python</td>
+          <td>Engineering</td>
+          <td>Software Engineer</td>
+          <td>$80,000</td>
+          <td>Team Lead</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>jane.smith@example.com</td>
+          <td>Female</td>
+          <td>Java, SQL</td>
+          <td>HR</td>
+          <td>HR Manager</td>
+          <td>$60,000</td>
+          <td>Recruiting Expert</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mike Johnson</td>
+          <td>mike.johnson@example.com</td>
+          <td>Male</td>
+          <td>Python, Machine Learning</td>
+          <td>Sales</td>
+          <td>Data Analyst</td>
+          <td>$75,000</td>
+          <td>Excellent Presenter</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Emily Davis</td>
+          <td>emily.davis@example.com</td>
+          <td>Female</td>
+          <td>JavaScript, React</td>
+          <td>Engineering</td>
+          <td>Frontend Developer</td>
+          <td>$70,000</td>
+          <td>Creative Designer</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="8" style="text-align: right;">Total Employees</td>
+          <td id="totalEmployees">4</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+</body>
+</html>

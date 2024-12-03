@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Lab</title>
+
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="description" content="HTML Lab Examples">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <base href="https://about.google/">
+</head>
+
+<body>
+
+  <h1>HTML Images</h1>
+
+  <img src="https://www.fodors.com/wp-content/uploads/2019/07/trulli-3.jpg" alt="Trulli" width="500" height="333">
+
+  <h2>Relative Image Path</h2>
+  <img src="/assets-main/img/glue-google-color-logo.svg" alt="Google Logo">
+
+  <h2>Animated Images</h2>
+  
+  <img src="https://shortpixel.com/blog/wp-content/uploads/2023/12/mario_compressed.gif" alt="Mario">
+
+  <h2>Image Maps</h2>
+  <p>Click on Computer, Phone, Cup or Coffee:</p>
+  <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+  <map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://en.wikipedia.org/wiki/Computer">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://en.wikipedia.org/wiki/Telephone">
+    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://en.wikipedia.org/wiki/Coffee">
+  </map>
+
+  <h2>Background Image</h2>
+
+  <p style="background-image: url('https://www.w3schools.com/html/img_girl.jpg');">
+  You can specify background images<br>
+  for any visible HTML element.<br>
+  In this example, the background image<br>
+  is specified for a p element.<br>
+  By default, the background-image<br>
+  will repeat itself in the direction(s)<br>
+  where it is smaller than the element<br>
+  where it is specified. Try resizing the<br>
+  browser window to see how the<br>
+  background image behaves.
+  </p>
+
+  <h2>Background Image: no-repeat</h2>
+
+  <p style="
+    background-image: url('https://www.w3schools.com/html/img_girl.jpg'); 
+    background-repeat: no-repeat;
+  ">
+  You can specify background images<br>
+  for any visible HTML element.<br>
+  In this example, the background image<br>
+  is specified for a p element.<br>
+  By default, the background-image<br>
+  will repeat itself in the direction(s)<br>
+  where it is smaller than the element<br>
+  where it is specified. Try resizing the<br>
+  browser window to see how the<br>
+  background image behaves.
+  </p>
+
+  <h2>Background Image: cover</h2>
+
+  <p style="
+    background-image: url('https://www.w3schools.com/html/img_girl.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  ">
+  You can specify background images<br>
+  for any visible HTML element.<br>
+  In this example, the background image<br>
+  is specified for a p element.<br>
+  By default, the background-image<br>
+  will repeat itself in the direction(s)<br>
+  where it is smaller than the element<br>
+  where it is specified. Try resizing the<br>
+  browser window to see how the<br>
+  background image behaves.
+  </p>
+
+  <h2>Background Image: stretch</h2>
+
+  <p style="
+    background-image: url('https://www.w3schools.com/html/img_girl.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  ">
+  You can specify background images<br>
+  for any visible HTML element.<br>
+  In this example, the background image<br>
+  is specified for a p element.<br>
+  By default, the background-image<br>
+  will repeat itself in the direction(s)<br>
+  where it is smaller than the element<br>
+  where it is specified. Try resizing the<br>
+  browser window to see how the<br>
+  background image behaves.
+  </p>
+
+
+  <h2>Picture Element</h2>
+  <p>Show different images for different screen sizes:</p>
+  <picture>
+    <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/img_food.jpg">
+    <source media="(min-width: 465px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+    <img src="https://www.w3schools.com/html/img_girl.jpg">
+  </picture>
+</body>
+
+</html>
